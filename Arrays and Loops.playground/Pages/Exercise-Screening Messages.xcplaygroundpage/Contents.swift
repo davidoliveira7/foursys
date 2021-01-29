@@ -7,7 +7,8 @@
  */
 import Foundation
 
-aliceMessages
+aliceMessages.count
+print (aliceMessages)
 
 
 /*:
@@ -32,7 +33,12 @@ for i in 0 ... colors.count - 1 {
  - Note: The `contains` method is part of the `Foundation` framework that you read about in the “Types” playground. That's why the `import Foundation` statement is in the code above. If the framework isn't imported, you'll get an error saying “Value of type 'String' has no member 'contains'.”
  */
 // Write the `for…in` loop here:
-
+for i in 0 ..< aliceMessages.count - 1 {
+    let message = aliceMessages[i]
+    if message.contains("Caterpillar") {
+        print("\(i): \(message)")
+    }
+}
 /*:
 [Previous](@previous)  |  page 17 of 18  |  [Next: Exercise: Partial Iteration](@next)
  */

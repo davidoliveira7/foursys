@@ -11,6 +11,10 @@ let shouldInstallCoffeeVendingMachineVotes: [Bool] = [true, true, false, false, 
 
 let shouldHaveMorePollOptionsVotes: [Bool] = [false, false, true, true, false, true, false, false, false, false, false, false, true, false, true, true, false, true, true, false, false, true, true, false, false, false, false, false, false, false, true, false, false, false, false, true, false, false, false, false, false, false, true, true, false, true, true, false, true, false, true, true, false, false, false, false, true, false, true, true, false, false, false, false, true, true, true, true, false, true, false, false, true, true, false, false, false, false, false, false, true, true, false, false, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, true, true, true, true, true, false, false, true, false, true, false, false, false, true, false, true, true, true, true, true, true, true, false, false, false, false, true, false, false, false, false, false, true, false, false, true, false, false, true, false, false, true, false, false, true, false, false, true, false, false, false, false, false, true, false, false, false, false, false, false, true, true, true, false, true, false, false, false, false, false, false, false, false, true, true, true, true, false, true, true, false, false, true, false, true, true, false, false, true, true, false, true, false, false, false, true, true, false, false]
 
+
+
+
+
 /*:
 This is too many votes to tally quickly by hand, so you’ll write some code to tally it for you.
 
@@ -20,13 +24,86 @@ This is also a lot of votes for Swift to use type inference to determine what ki
  
 //:  - callout(Exercise): Create two variables, one to count `yes` votes and one to count `no` votes. Each should start off with a value of zero.
 //:  - callout(Exercise): Create a `for…in` loop that iterates over one of the vote arrays and checks the value of each vote. If the vote is `true`, the loop should add one vote to the `yes` variable. If it's `false`, it should add one vote to the `no` variable.
+/*
+ var yesVotes = 0
+var noVotes = 0
 
+for voteMascot in shouldMascotChangeVotes {
+    if voteMascot == true {   // == true opcional náo precisa
+        yesVotes += 1
+    }else {
+        noVotes += 1
+    }
+}
+
+//----------
+var yesVotes = 0
+var noVotes = 0
+for voteCoffee in shouldInstallCoffeeVendingMachineVotes {
+    if voteCoffee == true {   // == true opcional náo precisa
+        yesVotes += 1
+    }else {
+        noVotes += 1
+    }
+}
+
+//-----------
+for voteMore in shouldHaveMorePollOptionsVotes {
+    if voteMore == true {   // == true opcional náo precisa
+        yesVotes += 1
+    }else {
+        noVotes += 1
+    }
+    
+}
+*/
 //:  - callout(Exercise): After the loop has finished, write an `if` statement that compares the two values and prints a different message based on whether the vote passed or failed.
+/*if yesVotes > noVotes{
+    print("A maioria aprovou a mudanca do mascote!")
+}else {
+    print("A maioria náo aprovou a mudanca do mascote!")
+}
 
+//------
+if yesVotes > noVotes{
+    print("A maioria aprovou a instalacao da maquina Coffee!")
+}else if yesVotes == noVotes {
+    print("Necessario nova votacao, pois nao pode haver empate!")
+}else {
+    print("A maioria náo aprovou a instalacao da maquina Coffee!")
+}
+
+//-------
+if yesVotes > noVotes{
+    print("A maioria aprovou a nova votacao!")
+}else {
+    print("A maioria náo aprovou a nova votacao!")
+}
+*/
 /*:
  - callout(Exercise): Test your code by calling the `for…in` loop on each of the vote arrays.\
 Which measures won by popular vote?
  */
+func voteResults(issue: String, votes: [Bool]){
+    
+    var yesVotes = 0
+    var noVotes = 0
+    
+    for vote in votes {
+        if vote == true {
+            yesVotes += 1
+        }else {
+            noVotes += 1
+        }
+    }
+    print("\(issue): \(yesVotes) sim, \(noVotes) não")
+}
+    
+voteResults(issue: "Troca de Marcote", votes: shouldMascotChangeVotes)
+voteResults(issue: "Troca da maquina de café", votes: shouldInstallCoffeeVendingMachineVotes)
+voteResults(issue: "Mais votações", votes: shouldHaveMorePollOptionsVotes)
+
+
 
 /*:
 ### Extension:
