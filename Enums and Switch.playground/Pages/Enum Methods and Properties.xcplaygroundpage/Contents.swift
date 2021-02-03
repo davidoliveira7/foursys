@@ -44,7 +44,14 @@ enum Suit {
         case .clubs: return 1
         }
     }
-    
+    var nipes: Int {
+        switch self {
+        case .spades: return "♠️"
+        case .hearts: return "❤️"
+        case .diamonds: return "♦️"
+        case .clubs: return "♣️"
+        }
+    }
     func beats(_ otherSuit: Suit) -> Bool {
         return self.rank > otherSuit.rank
     }

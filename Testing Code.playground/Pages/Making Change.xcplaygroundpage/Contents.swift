@@ -15,7 +15,10 @@
 
  - Experiment: Test the function with different purchase prices and amounts of cash. (Print the results to the console if the array is too large to see in the results sidebar.) Make sure you test illegal values, as well as those at and beyond the legal limits.
  */
-change(for: 10, purchasePrice: 2.75)
+change(for: 10000, purchasePrice: 2000)
+change(for: 10, purchasePrice: 20.00)
+change(for: 1000000000, purchasePrice: 20)
+
 
 /*:
  A better way to test is to express each call as a comparison between the actual result and the expected one. That way, any failures will appear as `false` in the results sidebar.

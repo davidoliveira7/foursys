@@ -22,6 +22,8 @@ func cookLunch(_ choice: LunchChoice) -> String {
 
 cookLunch(.burger)
 //:  - Experiment: Call the function a few more times, passing in different food choices.
+cookLunch(.pasta)
+cookLunch(.pasta)
 
 /*:
  Using the `LunchChoice` enum instead of a string solves the issues that this function had when it took a `String` value. There was no way to know what was on the menu.

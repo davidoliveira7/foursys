@@ -23,6 +23,7 @@ tabulator.incrementCount(forValue: "Ocean Express")
 tabulator.incrementCount(forValue: "The Fourth Time")
 
 print(tabulator.values)
+tabulator.count(forValue: "Ocean Express")
 //:  - callout(Exercise): Write a loop that iterates through all the tabulated strings (in `tabulator.values`) and prints the count for each one.
 
 /*:

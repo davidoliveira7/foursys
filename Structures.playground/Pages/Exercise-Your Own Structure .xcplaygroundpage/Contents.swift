@@ -7,6 +7,50 @@
  */
  // Add your English-language description of the type here. Make sure to add // before each line of your comment description.
 
+/*
+ 
+ */
+
+
+
+/*
+ Computer:
+- screenSize - imutavel - Double
+- totalRAMinMB - mutavel - int
+- manufacturer - imutavel -String
+- turnOn - metodo de instancia
+- turnOff - metodo de instancia
+- isOn - metodo de instancia
+ */
+
+// crie a estrutura baseado nas caracteristicas acima
+struct Computer {
+    let screenSize: Double
+    var totalRAMinMB: Int
+    let manufacturer: String
+    var isOn: Bool
+    
+    mutating func turnOnOff(mode: Bool){
+        isOn = mode
+        
+        if isOn {
+            print("Ligando computador...")
+        }else {
+            print("Desligando computador...")
+    }
+    }
+    func isComputerOn() -> Bool {
+        return isOn
+    }
+//    print(isOn ? "Ligando o computador..." : "Desligando micro...")
+}
+
+var macBook = Computer(screenSize: 15.5, totalRAMinMB: 8, manufacturer: "Apple", isOn: true)
+print(macBook.isComputerOn())
+macBook.turnOnOff(mode: false)
+print(macBook.isComputerOn())
+
+
 /*:
  - callout(Exercise): 
  Using the `struct` syntax from this lesson, create a type for your real-world object with the properties and methods you thought of. Remembering to mark each property with `let` or `var` depending on whether or not it will be allowed to change. If you're not sure how to implement the body of one of the methods, describe what the method should do in a comment.\

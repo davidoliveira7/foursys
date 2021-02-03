@@ -36,7 +36,7 @@ func change(for amountGiven: Double, purchasePrice: Double) -> [Denomination] {
         // skip to the next iteration of the loop.
         if currentDenomination.valueInPennies > changeInPennies {
             denominations.remove(at: 0)
-            currentDenomination = denominations[0]
+            currentDenomination = denomina3tions[0]
             continue
         }
         
@@ -50,7 +50,7 @@ func change(for amountGiven: Double, purchasePrice: Double) -> [Denomination] {
 }
 
 // This example doesn't work.
-change(for: 10, purchasePrice: 8.95) // Should be [.one, .nickel]
+change(for: 9.0, purchasePrice: 8.95) // Should be [.one, .nickel]
 /*:
  Lines 20 and 21 of `change(for:purchasePrice:)`, replicated below, convert the two argument values to whole numbers of pennies, represented by integers. (The `Int` initializer truncates the input floating point number by removing all digits past the decimal.)
 

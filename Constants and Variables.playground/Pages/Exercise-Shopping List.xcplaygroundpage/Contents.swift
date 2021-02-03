@@ -10,6 +10,11 @@ let bread = "Bread"
 let rice = "Rice"
 let newLine = "\n"
 
+
+let numero = 1
+numero + 3
+
+
 var shopping = " "
 shopping = eggs
 shopping = newLine

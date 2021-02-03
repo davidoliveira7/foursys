@@ -7,6 +7,7 @@
  */
 enum LunchChoice {
     case pasta, burger, soup
+    case sushi, pizza, coxinha
 }
 /*:
  On the previous page you made an enum instance like this:
@@ -17,7 +18,7 @@ enum LunchChoice {
  */
 var choice: LunchChoice
 //: If Swift already knows what type to expect, you can skip the enum name. Since you’ve already specified the type of `choice`, you can leave out the enum name when assigning a value:
-choice = .burger
+choice = .sushi
 //:  - Experiment: Practice assigning other values to `choice` using this shorter dot notation. Notice that the autocompletion menu pops up once you type the period.
 
 /*:

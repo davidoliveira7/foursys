@@ -1,11 +1,4 @@
-/*:
-## Functions
- 
- Your own types can be passed into or out of functions, just like built-in types. (In fact, you can use your own types any place you use built-in types.)
- 
- This struct defines a rectangular area:
- */
-struct Rectangle {
+ struct Rectangle {
     let width: Int
     let height: Int
 }
