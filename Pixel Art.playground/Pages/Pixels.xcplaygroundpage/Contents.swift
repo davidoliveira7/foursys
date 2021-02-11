@@ -10,13 +10,14 @@
 display.setPixel(x: 0, y: 0, color: .blue)
 display.setPixel(x: 1, y: 3, color: .yellow)
 //: - callout(Experiment): Uncomment the following line. After the `color:` parameter label, type a period; then select a color from the autocompletion options.
-//display.setPixel(x: 5, y: 2, color: )
+display.setPixel(x: 5, y: 2, color: .cyan)
 /*:
  But you can also create any color you want. The `Color` type has three initializers. You can use autocompletion to discover them.
  
  - callout(Experiment): Uncomment the following line. Position the insertion point after `Color(`, and press escape to see all the initializers. Select an initializer to create a custom color. Try using other initializers for additional pixels.
  */
-//display.setPixel(x: 7, y: 7, color: Color( )
+display.setPixel(x: 7, y: 7, color: Color(red: 7.0, green: 5.0, blue: 2.0))
+
 
 //: - callout(Exercise): Try creating a simple graphic by placing pixels of different colors on the display.
 

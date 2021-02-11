@@ -5,7 +5,7 @@ var _display: PixelDisplay! = nil
 
 public var display: PixelDisplay {
     if _display == nil {
-        _display = PixelDisplay(width: 40, height: 40)
+        _display = PixelDisplay(width: 80, height: 80)
         PlaygroundPage.current.liveView = _display
         PlaygroundPage.current.needsIndefiniteExecution = true
     }

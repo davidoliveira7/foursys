@@ -12,7 +12,7 @@
 import Foundation
 
 func passwordIsCorrect(_ password: String) -> Bool {
-    return password == "123"
+    return password == "abcd123"
 }
 
 let digits = "0123456789"
@@ -26,9 +26,10 @@ func guessPasswordOfThreeCharacters(containing characters: String) {
     for a in characters {
         for b in characters {
             for c in characters {
-                password = String(a) + String(b) + String(c)
+                for d in characters{
+                password = String(a) + String(b) + String(c) + String(d)
                 if passwordIsCorrect(password) {
-                    print("Found password: \(password)")
+                    print("Found 4-password: \(password)")
                     // The return statement below means that the function exits
                     // early when the password is guessed, rather than executing
                     // all loops to completion.
@@ -37,6 +38,7 @@ func guessPasswordOfThreeCharacters(containing characters: String) {
             }
         }
     }
+}
 }
 
 guessPasswordOfThreeCharacters(containing: digits)
@@ -52,7 +54,7 @@ guessPasswordOfThreeCharacters(containing: digits)
 - Which password can be guessed on the first try?
 - Which password requires the most tries before it can be guessed?
  */
-//guessPasswordOfThreeCharacters(containing: digits + lowercaseAlphas)
+guessPasswordOfThreeCharacters(containing: digits + lowercaseAlphas + punctuation)
 /*:
  Based on the password you choose to set in `checkPassword(_:)` and the order you supply the characters to guess, you can see that—even with just three characters—your playground can run for a very long time before finding a result.
 

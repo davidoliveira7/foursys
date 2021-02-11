@@ -35,7 +35,63 @@ let punctuation = "!@#$%^&*(),.<>;'`~[]{}\\|/?_-+= "
  
  As a bonus, consider adding more detailed error messages to let the user know exactly which rule they failed to observe.
  */
-let password = "password"
+let password = "Somenteeusei@007"
+if securityPassword(password: password) == true {
+    print ("Senha Segura")
+} else {
+    print("Reveja sua Senha")
+}
+
+
+
+//let password = "password"
+//
+//func insecurePassword(password: String) -> Bool {
+//    if tenMostCommonPasswords.contains (password){
+//        return true
+//    } else {
+//        return false
+//    }
+//}
+//
+//let password = "passworddecaracteres"
+//var msgError = String ()
+//if insecurePassword(password: password) {
+//    msgError += "Senha fraca , por favor revise\n"
+//}else if password.count < 16 {
+//    msgError += "A senha deve conter pelo menos 16 caracteres\n"
+//}else {
+//    var numberOfDigits = 0
+//    var numberOfPunctuationCharacteres = 0
+//    let numberOfRegularLetters = 0
+//    
+//    for character in password {
+//        if digits.contains(character) {
+//            numberOfDigits += 1
+//        }else if punctuation.contains(character) {
+//            numberOfPunctuationCharacteres += 1
+//        }else {
+//            numberOfRegularLetters
+//    }
+//}
+//
+//    if numberOfDigits == 0 {
+//        msgError += "Senha invalida, tem que ter ao menos 1 digito\n"
+//    }
+//    if numberOfPunctuationCharacteres == 0{
+//        msgError += "Sua senha tem que ter ao menos um caracter especial!"
+//    }
+//}
+//
+
+
+
+//let password = "passwordjsgdiusgfds123456$#@!"
+
+// Solução utilizando função - by Willian
+
+//let password = "p@passwordjsgdiusgfds123456"
+//validPassword(password: password)
 
 /*:
 [Previous](@previous)  |  page 2 of 5  |  [Next: Advanced Rules](@next)
